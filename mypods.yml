@@ -3,7 +3,7 @@ kind: ReplicationController
 metadata:
   name: mynginx-rc
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     app: mynginx
   template:
@@ -15,4 +15,4 @@ spec:
         - name: mynginxcont
           image: nginx
           ports:
-            - containerPort: 80
+            - containerPort: 8080
