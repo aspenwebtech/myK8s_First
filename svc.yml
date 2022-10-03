@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: venkey-svc
+  labeles: 
+    app: mynginx
+spece: 
+  type:
+  ports:
+  - port: 80
+    nodeport: 30001
+    protocall: TCP
+  selector:
+    app: nginx
